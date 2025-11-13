@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock %}
+
+{% block content %}
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4 text-success">🛒 Your Cart</h2>
+
+    {% for book in cart_items %}
+    <div class="card mb-3 shadow-sm">
+      <div class="row g-0">
+        <div class="col-md-3">
+          <img src="{{ book.image }}" class="img-fluid rounded-start" alt="{{ book.title }}">
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <p class="text-muted mb-1">Author: {{ book.author }}</p>
+            <p class="mb-1">Price: ₹{{ book.price }}</p>
+            <p class="small text-secondary">{{ book.description }}</p>
+            <div class="d-flex gap-2">
+              <a href="{% url 'cart:buy_now' %}" class="btn btn-warning btn-sm">Buy Now</a>
+              <button class="btn btn-outline-danger btn-sm">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="text-end mt-4">
+      <h5 class="fw-bold">Total: ₹{{ total_price }}</h5>
+      <a href="/" class="btn btn-outline-secondary mt-3">Continue Shopping</a>
+      <a href="{% url 'cart:buy_now' %}" class="btn btn-primary mt-3 ms-2">Proceed to Checkout</a>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

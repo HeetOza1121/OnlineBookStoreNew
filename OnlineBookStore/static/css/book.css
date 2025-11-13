@@ -1,0 +1,13 @@
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
+h2 {
+  font-weight: 700;
+}
+.btn {
+  transition: 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
