@@ -1,28 +1,53 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Online Book Store{% endblock %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}Online Book Store
+{%  endblock %} 
 {% block content %}
+
+<style>
+  .book-img {
+    height: 260px; /* You can adjust height if needed */
+    object-fit: contain; /* Shows full image */
+    background-color: #f8f9fa; /* Light background behind transparent images */
+    padding: 10px; /* Prevent image touching edges */
+  }
+
+  
+  .hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+  }
+
+  
+  .btn-group-vertical .btn {
+    width: 100%;
+  }
+</style>
 
 <!-- Hero Section -->
 <section class="bg-primary text-white text-center py-5 rounded shadow-sm mb-5">
   <div class="container">
     <h1 class="display-5 fw-bold">Welcome to the Online Book Store 📚</h1>
-    <p class="lead">Discover, explore, and fall in love with books — by category, author, or trend!</p>
-    <a href="/categories/" class="btn btn-warning fw-semibold mt-3 px-4">Explore Categories</a>
+    <p class="lead">
+      Discover, explore, and fall in love with books — by category, author, or
+      trend!
+    </p>
   </div>
 </section>
 
 <!-- Categories Section -->
 <section id="categories" class="mb-5 container">
-  <h2 class="mb-4 text-center text-primary fw-semibold">📚 Browse by Category</h2>
-  <div class="row justify-content-center">
+  <h2 class="mb-4 text-center text-primary fw-semibold">
+      Browse by Category
+  </h2>
+
+  <div class="row g-4">
     {% for category in categories %}
-    <div class="col-md-3 col-sm-6 mb-4">
+    <div class="col-md-3 col-sm-6">
       <a href="{{ category.url }}" class="text-decoration-none text-dark">
-        <div class="card shadow-sm border-0 text-center h-100 hover-shadow">
-          <div class="card-body py-4">
-            <h5 class="card-title fw-bold">{{ category.name }}</h5>
-          </div>
+        <div class="card shadow-sm border-0 text-center py-4 hover-card">
+          <h5 class="fw-bold">{{ category.name }}</h5>
         </div>
       </a>
     </div>
@@ -32,19 +57,37 @@
 
 <!-- Bestsellers Section -->
 <section id="bestsellers" class="mb-5 container">
-  <h2 class="mb-4 text-center text-danger fw-semibold">🔥 Bestsellers</h2>
-  <div class="row justify-content-center">
+  <h2 class="mb-4 text-center text-danger fw-semibold"> Bestsellers</h2>
+
+  <div class="row g-4">
     {% for book in bestsellers %}
-    <div class="col-md-3 col-sm-6 mb-4">
-      <div class="card h-100 border-0 shadow-sm text-center">
-        <img src="{{ book.cover_image }}" class="card-img-top" alt="{{ book.title }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ book.title }}</h5>
+    <div class="col-md-3 col-sm-6">
+      <div class="card border-0 shadow-sm h-100 hover-card">
+        <img
+          src="{{ book.cover_image }}"
+          class="book-img w-100"
+          alt="{{ book.title }}"
+        />
+
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">{{ book.title }}</h5>
           <p class="text-muted mb-1">by {{ book.author }}</p>
           <p class="fw-bold text-success">₹{{ book.price }}</p>
-          <div class="d-grid gap-2">
+
+          <div class="d-grid gap-2 mt-3">
+            {% if user.is_authenticated %}
             <a href="/cart/buy_now/" class="btn btn-sm btn-primary">Buy Now</a>
-            <a href="/cart/" class="btn btn-sm btn-outline-secondary">Add to Cart</a>
+            <a href="/cart/" class="btn btn-sm btn-outline-secondary"
+              >Add to Cart</a
+            >
+            {% else %}
+            <a href="/users/login/" class="btn btn-sm btn-primary"
+              >Login to Buy</a
+            >
+            <a href="/users/login/" class="btn btn-sm btn-outline-secondary"
+              >Login to Add to Cart</a
+            >
+            {% endif %}
           </div>
         </div>
       </div>
@@ -60,15 +103,26 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
-        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
-             class="img-fluid rounded shadow-sm"
-             alt="About us">
+        <img
+          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+          class="img-fluid rounded shadow-sm"
+          alt="About us"
+        />
       </div>
+
       <div class="col-md-6">
         <h2 class="fw-bold text-primary">About Us</h2>
-        <p>We are passionate about connecting readers with their next great story. Our collection spans genres, authors, and generations — from timeless classics to trending titles.</p>
-        <p>Founded in 2025, Online Book Store has quickly grown into a global community for book lovers. Whether you’re looking for fiction, education, or self-help, we’ve got something for everyone!</p>
-        <a href="/categories/" class="btn btn-outline-primary mt-3">Explore More</a>
+        <p>
+          We are passionate about connecting readers with their next great
+          story. Our collection spans genres, authors, and generations — from
+          timeless classics to trending titles.
+        </p>
+        <p>
+          Founded in 2025, Online Book Store has quickly grown into a global
+          community for book lovers.
+        </p>
+        <a href="/categories/" class="btn btn-outline-primary mt-3"
+          >Explore More</a>
       </div>
     </div>
   </div>
