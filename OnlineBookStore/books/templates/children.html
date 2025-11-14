@@ -1,25 +1,49 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Children Books | Online Book Store{% endblock %}
+{% extends 'base.html' %} {% load static %} {% block title %}Children Books |
+Online Book Store{% endblock %} {% block content %}
 
-{% block content %}
+<style>
+  .book-img {
+    height: 260px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
 
-<!-- Page Header -->
-<section class="text-center py-5 mb-5 text-white" 
-         style="background: linear-gradient(135deg, #007bff, #6610f2); border-radius: 10px;">
+  .book-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  .book-card:hover {
+    transform: translateY(-4px);
+  }
+</style>
+
+<section
+  class="text-center py-5 mb-5 text-white"
+  style="
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    border-radius: 10px;
+  "
+>
   <div class="container">
     <h1 class="display-5 fw-bold mb-2">Children Books</h1>
-    <p class="lead mb-0">Immerse yourself in stories that transport you to another world.</p>
+    <p class="lead mb-0">
+      Every story shines with joy and Adventure awaits on every page.
+    </p>
   </div>
 </section>
 
-<!-- Book List -->
 <div class="container">
   <div class="row g-4">
     {% for book in books %}
     <div class="col-md-4 col-sm-6">
       <div class="card border-0 shadow-sm h-100 book-card">
-        <img src="{{ book.image }}" class="card-img-top rounded-top" alt="{{ book.title }}" style="height: 320px; object-fit: cover;">
+        <img
+          src="{{ book.image }}"
+          class="book-img w-100"
+          alt="{{ book.title }}"
+        />
+
         <div class="card-body text-center">
           <h5 class="card-title fw-semibold text-dark">{{ book.title }}</h5>
           <p class="text-muted mb-1">by {{ book.author }}</p>
@@ -27,14 +51,31 @@
           <h6 class="fw-bold text-success mb-3">₹{{ book.price }}</h6>
 
           <div class="d-grid gap-2">
-            <a href="/cart/buy_now/" class="btn btn-primary btn-sm rounded-pill">Buy Now</a>
-            <a href="/cart/" class="btn btn-outline-secondary btn-sm rounded-pill">Add to Cart</a>
+            {% if user.is_authenticated %}
+            <a href="/cart/buy_now/" class="btn btn-primary btn-sm rounded-pill"
+              >Buy Now</a
+            >
+            <a
+              href="/cart/"
+              class="btn btn-outline-secondary btn-sm rounded-pill"
+              >Add to Cart</a
+            >
+            {% else %}
+            <a href="/users/login/" class="btn btn-primary btn-sm rounded-pill"
+              >Login to Buy</a
+            >
+            <a
+              href="/users/login/"
+              class="btn btn-outline-secondary btn-sm rounded-pill"
+              >Login to Add to Cart</a
+            >
+            {% endif %}
           </div>
         </div>
       </div>
     </div>
     {% empty %}
-    <p class="text-center text-muted">No fiction books available right now.</p>
+    <p class="text-center text-muted">No Children books available right now.</p>
     {% endfor %}
   </div>
 </div>

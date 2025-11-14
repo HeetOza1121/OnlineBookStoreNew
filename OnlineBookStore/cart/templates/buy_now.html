@@ -1,39 +1,50 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Buy Now{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}Buy Now{% endblock
+%} {% block content %}
 
 <div class="container py-5">
   <h2 class="text-center mb-5 text-primary fw-bold">Buy Now</h2>
 
-  <div class="card shadow-lg border-0 mx-auto" style="max-width: 900px;">
+  <div class="card shadow-lg border-0 mx-auto" style="max-width: 900px">
     <div class="row g-0 align-items-stretch">
-      
-      <!-- Book Image Section -->
-      <div class="col-md-5 bg-light d-flex justify-content-center align-items-center p-3">
-        <img src="{{ book.image }}" alt="{{ book.title }}" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
+      <div
+        class="col-md-5 bg-light d-flex justify-content-center align-items-center p-3"
+      >
+        <img
+          src="{{ book.image }}"
+          alt="{{ book.title }}"
+          class="img-fluid rounded shadow-sm"
+          style="max-height: 400px"
+        />
       </div>
 
-      <!-- Book & Form Details -->
       <div class="col-md-7 p-4">
         <div class="card-body">
           <h3 class="card-title text-dark fw-bold">{{ book.title }}</h3>
           <p class="text-muted mb-1">Author: {{ book.author }}</p>
           <p class="small text-secondary">{{ book.description }}</p>
-          <h5 class="fw-bold text-success mt-2 mb-4">Price: ₹{{ book.price }}</h5>
+          <h5 class="fw-bold text-success mt-2 mb-4">
+            Price: ₹{{ book.price }}
+          </h5>
 
-          <hr>
+          <hr />
 
           <h5 class="mb-3 text-primary">Shipping Details</h5>
           <form>
             <div class="mb-3">
               <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" placeholder="Enter your name">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your name"
+              />
             </div>
             <div class="mb-3">
               <label class="form-label">Address</label>
-              <textarea class="form-control" rows="2" placeholder="Enter your address"></textarea>
+              <textarea
+                class="form-control"
+                rows="2"
+                placeholder="Enter your address"
+              ></textarea>
             </div>
             <div class="mb-3">
               <label class="form-label">Payment Method</label>
@@ -43,7 +54,9 @@
                 <option>UPI / Net Banking</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary w-100 mt-2">Confirm Purchase</button>
+            <button type="submit" class="btn btn-primary w-100 mt-2">
+              Confirm Purchase
+            </button>
           </form>
         </div>
       </div>

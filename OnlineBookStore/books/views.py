@@ -7,28 +7,28 @@ BOOKS_DATA = {
             "author": "J.K. Rowling",
             "price": 499,
             "description": "A magical story of friendship and adventure in the wizarding world.",
-            "image": "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg",
+            "image": "/static/images/harrypotter.jpeg",
         },
         {
             "title": "The Alchemist",
             "author": "Paulo Coelho",
             "price": 299,
             "description": "A shepherd travels the world in search of his destiny.",
-            "image": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg",
+            "image": "/static/images/alcemist.jpeg",
         },
         {
             "title": "The Great Gatsby",
             "author": "F. Scott Fitzgerald",
             "price": 350,
             "description": "A tragic love story set in the roaring twenties.",
-            "image": "https://m.media-amazon.com/images/I/81af+MCATTL.jpg",
+            "image": "/static/images/greatgatsby.jpeg",
         },
         {
             "title": "1984",
             "author": "George Orwell",
             "price": 320,
             "description": "A chilling dystopian tale of surveillance and control.",
-            "image": "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg",
+            "image": "/static/images/1984.jpeg",
         },
         {
             "title": "To Kill a Mockingbird",
@@ -38,124 +38,120 @@ BOOKS_DATA = {
             "image": "/static/images/mocking.jpeg",
         },
     ],
-
     "science": [
         {
             "title": "A Brief History of Time",
             "author": "Stephen Hawking",
             "price": 399,
             "description": "Explore the mysteries of space, time, and black holes.",
-            "image": "https://m.media-amazon.com/images/I/81t2CVWEsUL.jpg",
+            "image": "/static/images/bhot.jpeg",
         },
         {
             "title": "The Selfish Gene",
             "author": "Richard Dawkins",
             "price": 450,
             "description": "Evolution through the lens of genetics and behavior.",
-            "image": "https://m.media-amazon.com/images/I/81yE3UxD2HL.jpg",
+            "image": "/static/images/selfishgene.jpeg",
         },
         {
             "title": "Sapiens",
             "author": "Yuval Noah Harari",
             "price": 499,
             "description": "The story of humankind, from evolution to modern society.",
-            "image": "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg",
+            "image": "/static/images/sapeins.jpeg",
         },
         {
             "title": "The Elegant Universe",
             "author": "Brian Greene",
             "price": 420,
             "description": "A deep dive into string theory and the fabric of the universe.",
-            "image": "https://m.media-amazon.com/images/I/81p2Tj9uEwL.jpg",
+            "image": "/static/images/elegantuni.jpeg",
         },
         {
             "title": "Cosmos",
             "author": "Carl Sagan",
             "price": 450,
             "description": "A breathtaking journey through space, science, and humanity.",
-            "image": "https://m.media-amazon.com/images/I/91w3Vjv1edL.jpg",
+            "image": "/static/images/cosmos.jpeg",
         },
     ],
-
     "self_help": [
         {
             "title": "Atomic Habits",
             "author": "James Clear",
             "price": 450,
             "description": "Learn to build better habits and improve daily life.",
-            "image": "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg",
+            "image": "/static/images/atomic.jpeg",
         },
         {
             "title": "The 7 Habits of Highly Effective People",
             "author": "Stephen Covey",
             "price": 499,
             "description": "Timeless lessons for success and leadership.",
-            "image": "https://m.media-amazon.com/images/I/81bGKUa1e0L.jpg",
+            "image": "/static/images/sevenhabits.jpeg",
         },
         {
             "title": "Think and Grow Rich",
             "author": "Napoleon Hill",
             "price": 299,
             "description": "A classic guide to developing a mindset for success.",
-            "image": "https://m.media-amazon.com/images/I/81s0B6NYXML.jpg",
+            "image": "/static/images/thinkngrow.jpeg",
         },
         {
             "title": "You Are a Badass",
             "author": "Jen Sincero",
             "price": 350,
             "description": "Learn to create a life you love with confidence and mindset shifts.",
-            "image": "https://m.media-amazon.com/images/I/81M8NsXRQ-L.jpg",
+            "image": "/static/images/badass.jpeg",
         },
         {
             "title": "How to Win Friends & Influence People",
             "author": "Dale Carnegie",
             "price": 399,
             "description": "A must-read guide to improving communication and relationships.",
-            "image": "https://m.media-amazon.com/images/I/81WojUxbbFL.jpg",
+            "image": "/static/images/friendsandpeople.jpeg",
         },
     ],
-
     "children": [
         {
             "title": "Matilda",
             "author": "Roald Dahl",
             "price": 299,
             "description": "A brilliant girl with extraordinary powers.",
-            "image": "https://m.media-amazon.com/images/I/81c4jY5vJcL.jpg",
+            "image": "/static/images/matilda.jpeg",
         },
         {
             "title": "Charlotte's Web",
             "author": "E.B. White",
             "price": 350,
             "description": "A heartwarming story of friendship between a pig and a spider.",
-            "image": "https://m.media-amazon.com/images/I/81k2Gmal+VL.jpg",
+            "image": "/static/images/charlotte.jpeg",
         },
         {
             "title": "The Gruffalo",
             "author": "Julia Donaldson",
             "price": 280,
             "description": "A clever mouse outsmarts a monster in the woods.",
-            "image": "https://m.media-amazon.com/images/I/91pR9wKJolL.jpg",
+            "image": "/static/images/gruffalo.jpeg",
         },
         {
             "title": "Diary of a Wimpy Kid",
             "author": "Jeff Kinney",
             "price": 350,
             "description": "A hilarious journey through school and life.",
-            "image": "https://m.media-amazon.com/images/I/81tZf7AbBuL.jpg",
+            "image": "/static/images/winkykid.jpeg",
         },
         {
             "title": "The Cat in the Hat",
             "author": "Dr. Seuss",
             "price": 260,
             "description": "A fun, rhyming classic loved by children worldwide.",
-            "image": "https://m.media-amazon.com/images/I/71xZ8M9RUpL.jpg",
+            "image": "/static/images/catinhat.jpeg",
         },
     ],
 }
 
 
-# 🏠 Home Page
 def home(request):
     categories = [
         {"name": "Fiction", "url": "/books/fiction/"},
@@ -169,44 +165,49 @@ def home(request):
             "title": "Atomic Habits",
             "author": "James Clear",
             "price": 450,
-            "cover_image": "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg",
+            "cover_image": "/static/images/atomic.jpeg",
         },
         {
             "title": "Harry Potter",
             "author": "J.K. Rowling",
             "price": 499,
-            "cover_image": "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg",
+            "cover_image": "/static/images/harrypotter.jpeg",
         },
         {
             "title": "The Alchemist",
             "author": "Paulo Coelho",
             "price": 299,
-            "cover_image": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg",
+            "cover_image": "/static/images/alcemist.jpeg",
         },
         {
             "title": "A Brief History of Time",
             "author": "Stephen Hawking",
             "price": 399,
-            "cover_image": "https://m.media-amazon.com/images/I/81t2CVWEsUL.jpg",
+            "cover_image": "/static/images/bhot.jpeg",
         },
     ]
 
-    return render(request, "home.html", {"categories": categories, "bestsellers": bestsellers})
+    return render(
+        request, "home.html", {"categories": categories, "bestsellers": bestsellers}
+    )
 
-# 📚 Categories Page
+
 def categories(request):
     categories = ["Fiction", "Science", "Self Help", "Children"]
     return render(request, "categories.html", {"categories": categories})
 
-# 🔖 Category-wise Book Pages
+
 def fiction_books(request):
     return render(request, "fiction.html", {"books": BOOKS_DATA["fiction"]})
+
 
 def science_books(request):
     return render(request, "science.html", {"books": BOOKS_DATA["science"]})
 
+
 def self_help_books(request):
     return render(request, "self_help.html", {"books": BOOKS_DATA["self_help"]})
+
 
 def children_books(request):
     return render(request, "children.html", {"books": BOOKS_DATA["children"]})

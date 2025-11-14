@@ -1,8 +1,5 @@
-{% extends 'base.html' %} 
-{% load static %} 
-{% block title %}Online Book Store
-{%  endblock %} 
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}Online Book Store
+{% endblock %} {% block content %}
 
 <style>
   .book-img {
@@ -12,23 +9,20 @@
     padding: 10px; /* Prevent image touching edges */
   }
 
-  
   .hover-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: 0.3s ease-in-out;
   }
 
-  
   .btn-group-vertical .btn {
     width: 100%;
   }
 </style>
 
-<!-- Hero Section -->
 <section class="bg-primary text-white text-center py-5 rounded shadow-sm mb-5">
   <div class="container">
-    <h1 class="display-5 fw-bold">Welcome to the Online Book Store 📚</h1>
+    <h1 class="display-5 fw-bold">Welcome to the Online Book Store</h1>
     <p class="lead">
       Discover, explore, and fall in love with books — by category, author, or
       trend!
@@ -36,11 +30,8 @@
   </div>
 </section>
 
-<!-- Categories Section -->
 <section id="categories" class="mb-5 container">
-  <h2 class="mb-4 text-center text-primary fw-semibold">
-      Browse by Category
-  </h2>
+  <h2 class="mb-4 text-center text-primary fw-semibold">Browse by Category</h2>
 
   <div class="row g-4">
     {% for category in categories %}
@@ -55,9 +46,8 @@
   </div>
 </section>
 
-<!-- Bestsellers Section -->
 <section id="bestsellers" class="mb-5 container">
-  <h2 class="mb-4 text-center text-danger fw-semibold"> Bestsellers</h2>
+  <h2 class="mb-4 text-center text-danger fw-semibold">Bestsellers</h2>
 
   <div class="row g-4">
     {% for book in bestsellers %}
@@ -98,7 +88,6 @@
   </div>
 </section>
 
-<!-- About Us Section -->
 <section id="about" class="py-5 bg-light border-top">
   <div class="container">
     <div class="row align-items-center">
@@ -122,7 +111,8 @@
           community for book lovers.
         </p>
         <a href="/categories/" class="btn btn-outline-primary mt-3"
-          >Explore More</a>
+          >Explore More</a
+        >
       </div>
     </div>
   </div>
