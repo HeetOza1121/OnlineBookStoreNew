@@ -1,5 +1,4 @@
-{% extends 'base.html' %} {% block title %}Profile{% endblock %} {% block
-content %}
+{% extends 'base.html' %} {% block title %}Profile{% endblock %} {% block content %}
 <div class="container py-5">
   <h2 class="text-center text-primary mb-4">👤 Profile</h2>
 
@@ -9,15 +8,13 @@ content %}
       <hr />
       <p><strong>Email:</strong> {{ user.email }}</p>
       <p>
-        <strong>First Name:</strong> {{ user.first_name|default:"Not Provided"
-        }}
+        <strong>First Name:</strong> {{ user.first_name|default:"Not Provided" }}
       </p>
       <p>
         <strong>Last Name:</strong> {{ user.last_name|default:"Not Provided" }}
       </p>
 
-      <a href="{% url 'logout' %}" class="btn btn-outline-danger mt-3"
-        >Logout</a
+      <a href="{% url 'logout' %}" class="btn btn-outline-danger mt-3">Logout</a
       >
     </div>
   </div>

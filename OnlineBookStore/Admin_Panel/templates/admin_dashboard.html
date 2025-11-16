@@ -1,0 +1,36 @@
+{% extends 'admin_panel/base_admin.html' %} {% block title %}Dashboard{%
+endblock %} {% block content %}
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row g-4">
+  <div class="col-md-3">
+    <div class="card shadow-sm p-3 text-center">
+      <h4>Users</h4>
+      <h2 class="text-primary">132</h2>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card shadow-sm p-3 text-center">
+      <h4>Orders</h4>
+      <h2 class="text-success">87</h2>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card shadow-sm p-3 text-center">
+      <h4>Revenue</h4>
+      <h2 class="text-dark">₹45,000</h2>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card shadow-sm p-3 text-center">
+      <h4>Books</h4>
+      <h2 class="text-warning">52</h2>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

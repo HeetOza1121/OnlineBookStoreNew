@@ -1,0 +1,38 @@
+{% extends 'admin_panel/base_admin.html' %} {% block title %}Orders{% endblock
+%} {% block content %}
+
+<h2 class="mb-4">Manage Orders</h2>
+
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Items</th>
+      <th>Total</th>
+      <th>Status</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>101</td>
+      <td>HitOza</td>
+      <td>3</td>
+      <td>₹1299</td>
+      <td><span class="badge bg-warning">Pending</span></td>
+      <td>
+        <select class="form-select form-select-sm">
+          <option>Pending</option>
+          <option>Packed</option>
+          <option>Shipped</option>
+          <option>Delivered</option>
+          <option>Cancelled</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

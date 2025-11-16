@@ -1,0 +1,28 @@
+{% extends 'admin_panel/base_admin.html' %} {% block title %}Users{% endblock %}
+{% block content %}
+
+<h2 class="mb-4">Manage Users</h2>
+
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Total Orders</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>HitOza</td>
+      <td>hit@example.com</td>
+      <td>5</td>
+      <td><span class="badge bg-success">Active</span></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
